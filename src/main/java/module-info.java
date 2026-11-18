@@ -6,7 +6,7 @@ module uam.edu.ni.servicios_web {
 
     exports uam.edu.ni.servicios_web.controller to javafx.fxml;
     opens uam.edu.ni.servicios_web.controller to javafx.fxml;
-    opens uam.edu.ni.servicios_web.model to javafx.fxml;
+    opens uam.edu.ni.servicios_web.model to javafx.base;
 
     opens uam.edu.ni.servicios_web to javafx.fxml;
     exports uam.edu.ni.servicios_web;
