@@ -30,14 +30,14 @@ public class ClienteController {
 
     @FXML
     public void initialize() {
-        colId.setCellValueFactory(c -> new ReadOnlyObjectWrapper<>(c.getValue().id()));
-        colNombre.setCellValueFactory(c -> new ReadOnlyObjectWrapper<>(c.getValue().nombre()));
-        colCorreo.setCellValueFactory(c -> new ReadOnlyObjectWrapper<>(c.getValue().correo()));
-        colTelefono.setCellValueFactory(c -> new ReadOnlyObjectWrapper<>(c.getValue().telefono()));
-        colCiudad.setCellValueFactory(c -> new ReadOnlyObjectWrapper<>(c.getValue().ciudad()));
-        colIngreso.setCellValueFactory(c -> new ReadOnlyObjectWrapper<>(c.getValue().ingresoAnual()));
-        colPuntaje.setCellValueFactory(c -> new ReadOnlyObjectWrapper<>(c.getValue().puntajeCredito()));
-        colDeudor.setCellValueFactory(c -> new ReadOnlyObjectWrapper<>(c.getValue().deudor() ? "Sí" : "No"));
+        colId.setCellValueFactory(c -> new ReadOnlyObjectWrapper<>(c.getValue().getId()));
+        colNombre.setCellValueFactory(c -> new ReadOnlyObjectWrapper<>(c.getValue().getNombre()));
+        colCorreo.setCellValueFactory(c -> new ReadOnlyObjectWrapper<>(c.getValue().getCorreo()));
+        colTelefono.setCellValueFactory(c -> new ReadOnlyObjectWrapper<>(c.getValue().getTelefono()));
+        colCiudad.setCellValueFactory(c -> new ReadOnlyObjectWrapper<>(c.getValue().getCiudad()));
+        colIngreso.setCellValueFactory(c -> new ReadOnlyObjectWrapper<>(c.getValue().getIngresoAnual()));
+        colPuntaje.setCellValueFactory(c -> new ReadOnlyObjectWrapper<>(c.getValue().getPuntajeCredito()));
+        colDeudor.setCellValueFactory(c -> new ReadOnlyObjectWrapper<>(c.getValue().tieneDeuda() ? "Sí" : "No"));
     }
 
     @FXML
