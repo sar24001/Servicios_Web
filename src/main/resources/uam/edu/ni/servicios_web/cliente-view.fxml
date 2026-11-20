@@ -6,16 +6,19 @@
 <?import javafx.scene.text.Font?>
 
 <VBox spacing="16" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="uam.edu.ni.servicios_web.controller.ClienteController">
+      fx:controller="uam.edu.ni.servicios_web.controller.ClienteController"
+      style="-fx-background-color: #f1f5f4;">
     <padding>
         <Insets top="20" right="20" bottom="20" left="20"/>
     </padding>
-    <Label text="Consulta de clientes - API REST">
-        <font><Font name="System Bold" size="18"/></font>
-    </Label>
-    <HBox alignment="CENTER_LEFT" spacing="10">
-        <Button fx:id="btnConsultar" text="Consultar clientes" onAction="#consultarClientes"/>
-        <Label fx:id="lblEstado" text="Presione Consultar clientes"/>
+    <HBox alignment="CENTER_LEFT" spacing="16"
+          style="-fx-background-color: #174a43; -fx-background-radius: 10; -fx-padding: 16;">
+        <Label text="Directorio de clientes" textFill="WHITE">
+            <font><Font name="System Bold" size="22"/></font>
+        </Label>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button fx:id="btnConsultar" text="Cargar clientes" onAction="#consultarClientes"
+                style="-fx-background-color: #ffffff; -fx-text-fill: #174a43; -fx-background-radius: 6; -fx-padding: 8 14;"/>
     </HBox>
     <TableView fx:id="tablaClientes" VBox.vgrow="ALWAYS">
         <columns>
@@ -28,6 +31,7 @@
             <TableColumn fx:id="colPuntaje" text="Puntaje" prefWidth="80"/>
             <TableColumn fx:id="colDeudor" text="Deudor" prefWidth="75"/>
         </columns>
-        <placeholder><Label text="Tabla sin contenido"/></placeholder>
+        <placeholder><Label text="Los clientes aparecerán aquí al cargar la lista."/></placeholder>
     </TableView>
+    <Label fx:id="lblEstado" text="Sin consulta todavía" textFill="#36534e"/>
 </VBox>
